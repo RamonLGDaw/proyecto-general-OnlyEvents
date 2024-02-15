@@ -17,6 +17,10 @@
             flex-direction: column;
         }
 
+        h1 {
+            color: #ffc107;
+        }
+
         main {
             flex-grow: 1;
         }
@@ -28,9 +32,15 @@
             padding: 2rem;
         }
 
-        .centradoCards{
+        .centradoCards {
             display: flex;
             justify-content: center;
+        }
+
+        .roboto-font {
+            /* He elegido esta fuente para cambiar un poco, pero ya elegiremos una que no convenza a todos */
+            font-family: 'Roboto', sans-serif;
+            font-style: oblique;
         }
     </style>
 </head>
@@ -68,8 +78,15 @@
         <section id="contenedorSelect">
 
         </section>
+        <h1 id="tituloEventosDestacados" class="text-center text-uppercase display-4 fw-bold text-warning roboto-font">
+            Eventos destacados!!</h1>
 
-        <section id="contenedorCardsEventos" class="centradoCards" >
+
+        <section id="contenedorEventosDestacados" class="centradoCards">
+
+        </section>
+
+        <section id="contenedorCardsEventos" class="centradoCards">
 
         </section>
 

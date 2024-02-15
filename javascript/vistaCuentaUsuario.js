@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
             const cardBody = document.createElement('div');
             cardBody.classList.add('card-body');
             
-            const title = document.createElement('h5');
-            title.classList.add('card-title', 'text-center'); // Agregar clase para centrar el título
-            title.textContent = `${primerUsuario.nombre} ${primerUsuario.apellido}`;
+            const nomUsuari = document.createElement('h5');
+            nomUsuari.classList.add('card-title', 'text-center'); // Agregar clase para centrar el título
+            nomUsuari.textContent = `${primerUsuario.nombre} ${primerUsuario.apellido}`;
             
-            const edad = document.createElement('p');
-            edad.classList.add('card-text', 'font-weight-bold'); // Agregar clase para negrita
-            edad.innerHTML = `<strong>Edad:</strong> ${primerUsuario.edad}`;
+            const edat = document.createElement('p');
+            edat.classList.add('card-text', 'font-weight-bold'); // Agregar clase para negrita
+            edat.innerHTML = `<strong>Edad:</strong> ${primerUsuario.edad}`;
             
             const sexo = document.createElement('p');
             sexo.classList.add('card-text', 'font-weight-bold'); // Agregar clase para negrita
@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
             tiposEventos.innerHTML = `<strong>Tipos de eventos preferidos:</strong> ${primerUsuario.tipos_eventos_preferidos.join(', ')}`;
             
             // Construir la estructura de la tarjeta
-            cardBody.appendChild(title);
-            cardBody.appendChild(edad);
+            cardBody.appendChild(nomUsuari);
+            cardBody.appendChild(edat);
             cardBody.appendChild(sexo);
             cardBody.appendChild(telefono);
             cardBody.appendChild(alias);

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
             card.style.width = '18rem';
             
             const img = document.createElement('img');
-            img.classList.add('card-img-top', 'rounded-circle', 'mx-auto', 'mt-1'); // Agregar clase para redondear la imagen y centrarla
+            img.classList.add('card-img-top', 'rounded-circle', 'mx-auto', 'mt-3'); // Agregar clase para redondear la imagen y centrarla
             img.style.width = '150px'; // Definir el ancho de la imagen
             img.style.height = '150px'; // Definir la altura de la imagen
             img.src = primerUsuario.avatar;

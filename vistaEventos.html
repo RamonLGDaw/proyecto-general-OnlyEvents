@@ -8,7 +8,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Agrega el favicon -->
     <link rel="icon" type="image/png" href="img/logo_O_E.png">
-    <script src="javascript/vistaEventos.js"></script>
+    <!-- <script src="javascript/vistaEventos.js"></script> -->
+    <script src="javascript/alternativaVistaEventos.js"></script>
     <title>Vista Eventos</title>
     <style>
         body {
@@ -71,7 +72,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="eventosReservados.html">Mis reservas</a>
                         </li>
-                        
                     </ul>
                 </div>
             </div>
@@ -79,8 +79,8 @@
     </header>
     <main class="container centradoContenedorCards">
 
-        <section id="contenedorSelect">
-
+        <section id="contenedorSelect" class="d-flex justify-content-center">
+            <!-- Aquí se crea dinámicamente el selector de categorias de eventos -->
         </section>
         <h1 id="tituloEventosDestacados" class="m-3 mb-4 text-center text-uppercase display-4 fw-bold text-warning roboto-font">
             Eventos destacados!!</h1>

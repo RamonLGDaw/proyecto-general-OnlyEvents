@@ -9,7 +9,7 @@
     <!-- Agrega el favicon -->
     <link rel="icon" type="image/png" href="img/logo_O_E.png">
     <!-- <script src="javascript/vistaEventos.js"></script> -->
-    <script src="javascript/alternativaVistaEventos.js"></script>
+    <script src="javascript/vistaEventosV2.js"></script>
     <title>Vista Eventos</title>
     <style>
         body {
@@ -24,9 +24,6 @@
 
         main {
             flex-grow: 1;
-        }
-
-        .centradoContenedorCards {
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -36,6 +33,7 @@
         .centradoCards {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .roboto-font {
@@ -70,14 +68,14 @@
                             <a class="nav-link" href="vistaEventos.html">Eventos Destacados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="eventosReservados.html">Mis reservas</a>
+                            <a class="nav-link" href="vistaEventosReservados.html">Mis reservas</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="container centradoContenedorCards">
+    <main class="container">
 
         <section id="contenedorSelect" class="d-flex justify-content-center">
             <!-- Aquí se crea dinámicamente el selector de categorias de eventos -->
@@ -85,14 +83,10 @@
         <h1 id="tituloEventosDestacados" class="m-3 mb-4 text-center text-uppercase display-4 fw-bold text-warning roboto-font">
             Eventos destacados!!</h1>
 
+            <section id="contenedorTarjetas" class="centradoCards">
+                <!-- Aquí se visualizarán dinámicamente todas las tarjetas -->
+            </section>
 
-        <section id="contenedorEventosDestacados" class="centradoCards">
-
-        </section>
-
-        <section id="contenedorCardsEventos" class="centradoCards">
-
-        </section>
 
     </main>
     <footer class="bg-secondary text-white text-center py-3">

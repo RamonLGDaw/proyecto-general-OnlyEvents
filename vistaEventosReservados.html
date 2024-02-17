@@ -10,6 +10,14 @@
     <link rel="icon" type="image/png" href="img/logo_O_E.png">
     <script src="javascript/eventosReservador.js"></script>
     <title>Mis reservas</title>
+
+    <style>
+        .roboto-font {
+           /* He elegido esta fuente para cambiar un poco, pero ya elegiremos una que no convenza a todos */
+           font-family: 'Roboto', sans-serif;
+           font-style: oblique;
+       }
+   </style>
 </head>
 
 <body class="bg-primary d-flex flex-column" style="min-height: 100vh;">
@@ -46,7 +54,7 @@
     <main class="container d-flex justify-content-center m-auto flex-grow-1">
         <!-- Aquí va el contenido de la vista -->
         <section class="container">
-            <h1 class="text-center text-white mt-3">Mis reservas</h1>
+            <h1 class="text-center m-3 mb-4 text-center text-uppercase display-4 fw-bold text-warning roboto-font">Mis reservas</h1>
             <div id="cardsEventosReservados" class="d-flex justify-content-center flex-wrap"></div>
         </section>
     </main>

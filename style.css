@@ -1,0 +1,33 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #ffc107;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.centradoCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.roboto-font {
+    /* He elegido esta fuente para cambiar un poco, pero ya elegiremos una que no convenza a todos */
+    font-family: 'Roboto', sans-serif;
+    font-style: oblique;
+}
+
+.ocultarSelect {
+    display: none !important;
+}

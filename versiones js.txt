@@ -1,0 +1,3 @@
+En vista eventos ==> no se muestra la vista de detalles
+
+En vistaEventosV2 ==> Toda la tarjeta es btn y se hace complicado de manejar desde el móvil

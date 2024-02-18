@@ -8,16 +8,11 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Agrega el favicon -->
     <link rel="icon" type="image/png" href="img/logo_O_E.png">
-    <script src="javascript/eventosReservador.js"></script>
+    <script src="javascript/crearTarjetas.js"></script>
+    <script src="javascript/crearTarjetaDetalle.js"></script>
+    <script src="javascript/eventosReservados.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Mis reservas</title>
-
-    <style>
-        .roboto-font {
-           /* He usado esta fuente, pero ya elegiremos una que nos convenza a todos */
-           font-family: 'Roboto', sans-serif;
-           font-style: oblique;
-       }
-   </style>
 </head>
 
 <body class="bg-primary d-flex flex-column" style="min-height: 100vh;">
@@ -54,8 +49,12 @@
     <main class="container d-flex justify-content-center m-auto flex-grow-1 mb-3">
         <!-- Aquí va el contenido de la vista -->
         <section class="container">
-            <h1 class="text-center mt-4 mb-4 text-center text-uppercase display-4 fw-bold text-warning roboto-font">Mis reservas</h1>
-            <div id="cardsEventosReservados" class="d-flex justify-content-center flex-wrap"></div>
+            <h1 class="text-center mt-2 mb-4 text-center text-uppercase display-4 fw-bold text-warning roboto-font">Mis reservas</h1>
+            <section id="contenedorTarjetas" class="centradoCards">
+                <!-- Aquí se visualizarán dinámicamente todas las tarjetas -->
+            </section>
+            <!-- Contenedor para mostrar detalles del evento -->
+            <section id="contenedorDetalle" class="centradoCards"></section>
         </section>
     </main>
     <footer class="bg-secondary text-white text-center py-3">

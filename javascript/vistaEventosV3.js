@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const defaultOption = document.createElement('option');
             defaultOption.setAttribute('value', '');
-            defaultOption.textContent = 'Tipos de eventos';
+            defaultOption.textContent = 'Tipos de evento';
             defaultOption.setAttribute('disabled', true);
             defaultOption.setAttribute('selected', true);
             selector.appendChild(defaultOption);

@@ -69,11 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Evento touchstart para solucionar el problema de la vista detalle en el mvl
-        nombreEvento.addEventListener('touchstart', (evento) => {
+        nombreEvento.addEventListener('touchstart', () => {
             mostrarDetalle(evento);
         });
 
-        imagenEvento.addEventListener('touchstart', (evento) => {
+        imagenEvento.addEventListener('touchstart', () => {
             mostrarDetalle(evento);
         });
     }

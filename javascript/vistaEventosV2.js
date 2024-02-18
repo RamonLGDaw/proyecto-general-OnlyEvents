@@ -67,6 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
         imagenEvento.addEventListener('click', () => {
             mostrarDetalle(evento);
         });
+
+        // Evento touchstart para solucionar el problema de la vista detalle en el mvl
+        nombreEvento.addEventListener('touchstart', (evento) => {
+            mostrarDetalle(evento);
+        });
+
+        imagenEvento.addEventListener('touchstart', (evento) => {
+            mostrarDetalle(evento);
+        });
     }
 
     // Función para crear una tarjeta de detalle que recibe los datos del EVENTO
@@ -131,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mostrarDetalle = (evento) => {
         // Ocultar el contenedor de tarjetas y el selector de categorías
         contenedorTarjetas.style.display = 'none';
-        console.log('TR: Mostrando detalle'); 
+        console.log('TR: Mostrando detalle');
         // contenedorSelect.style.display = 'none';
         document.getElementById('contenedorOcultarSelect').style.display = 'none';
         // Vaciar el contenido previo del contenedor de detalles

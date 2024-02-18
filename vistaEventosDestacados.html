@@ -8,13 +8,47 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Agrega el favicon -->
     <link rel="icon" type="image/png" href="img/logo_O_E.png">
-    <script src="javascript/vistaCuentaUsuario.js"></script>
-    <title>Perfil de usuario</title>
+    <!-- <script src="javascript/vistaEventos.js"></script> -->
+    <script src="javascript/vistaEventosV2.js"></script>
+    <title>Eventos Destacados</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
+        h1 {
+            color: #ffc107;
+        }
 
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .centradoCards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .roboto-font {
+            /* He elegido esta fuente para cambiar un poco, pero ya elegiremos una que no convenza a todos */
+            font-family: 'Roboto', sans-serif;
+            font-style: oblique;
+        }
+
+        .ocultarSelect {
+            display: none !important;
+        }
+    </style>
 </head>
 
-<body class="bg-primary d-flex flex-column" style="min-height: 100vh;">
+<body class="bg-primary">
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <div class="container">
@@ -35,30 +69,37 @@
                             <a class="nav-link" href="vistaCuentaUsuario.html">Perfil de usuario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="vistaEventosDestacados.html">Eventos Destacados</a>
+                            <a class="nav-link" href="#">Eventos Destacados</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="vistaEventosReservados.html">Mis reservas</a>
                         </li>
-                        
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="container d-flex flex-column align-items-center justify-content-center m-auto flex-grow-1">
-        <div id="contenedorPerfilUsuario" class="container m-3 d-flex justify-content-center">
+    <main class="container">
 
-        </div>
-        <!-- Botón "Modificar datos" -->
-        <button id="botonModificarDatos" class="btn btn-success m-3">Modificar datos</button>
+        <section id="contenedorSelect" class="d-flex justify-content-center ocultarSelect">
+            <!-- Aquí se crea dinámicamente el selector de categorias de eventos -->
+        </section>
+        <h1 id="tituloEventosDestacados"
+            class="mt-1 mb-4 text-center text-uppercase display-4 fw-bold text-warning roboto-font">
+            Eventos destacados!!</h1>
+
+        <section id="contenedorTarjetas" class="centradoCards">
+            <!-- Aquí se visualizarán dinámicamente todas las tarjetas -->
+        </section>
+        <!-- Contenedor para mostrar detalles del evento -->
+        <section id="contenedorDetalle" class="centradoCards"></section>
+
     </main>
     <footer class="bg-secondary text-white text-center py-3">
         <div class="container">
             <p class="mb-0">© 2024 - Todos los derechos reservados</p>
         </div>
     </footer>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

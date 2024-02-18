@@ -65,7 +65,7 @@
                             <a class="nav-link" href="vistaCuentaUsuario.html">Perfil de usuario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="vistaEventos.html">Eventos Destacados</a>
+                            <a class="nav-link" href="vistaEventosDestacados.html">Eventos Destacados</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="vistaEventosReservados.html">Mis reservas</a>
@@ -75,17 +75,23 @@
             </div>
         </nav>
     </header>
-    <main class="container">
-
-        <section id="contenedorSelect" class="d-flex justify-content-center">
-            <!-- Aquí se crea dinámicamente el selector de categorias de eventos -->
+    <main class="container mb-3">
+        <section id="contenedorOcultarSelect">
+            <div id="contenedorSelect" class="d-flex justify-content-center">
+                <!-- Aquí se crea dinámicamente el selector de categorias de eventos -->
+            </div>
         </section>
-        <h1 id="tituloEventosDestacados" class="m-3 mb-4 text-center text-uppercase display-4 fw-bold text-warning roboto-font">
+
+        <h1 id="tituloEventosDestacados"
+            class="m-3 mb-4 text-center text-uppercase display-4 fw-bold text-warning roboto-font">
             Eventos destacados!!</h1>
 
-            <section id="contenedorTarjetas" class="centradoCards">
-                <!-- Aquí se visualizarán dinámicamente todas las tarjetas -->
-            </section>
+        <section id="contenedorTarjetas" class="centradoCards">
+            <!-- Aquí se visualizarán dinámicamente todas las tarjetas -->
+        </section>
+        <!-- Contenedor para mostrar detalles del evento -->
+        <div id="contenedorDetalle" class="centradoCards"></div>
+
 
 
     </main>

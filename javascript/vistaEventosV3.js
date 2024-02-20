@@ -13,15 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const contenedorOcultarSelect = document.getElementById('contenedorOcultarSelect');
     let categoria;
 
-    
-
     // Mostrar eventos destacados al cargar la vista
     fetch(URL + 'events/destacados')
         .then(res => res.json())
         .then(datos => {
-            datos.destacados.forEach(evento => {
-                crearTarjeta(evento);
-            })
+            datos.destacados.forEach((evento, index) => {
+                crearTarjeta(evento, index);
+            });
         })
         .catch(err => {
             console.log('Error en la petición de los eventos destacados', err);
@@ -62,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     .then(res => res.json())
                     .then(datos => {
                         contenedorTarjetas.innerHTML = '';
-                        datos.eventos.forEach(evento => {
-                            crearTarjeta(evento);
-                        })
+                        datos.eventos.forEach((evento, index) => {
+                            crearTarjeta(evento, index);
+                        });
                     })
                     .catch(err => {
                         console.log('Hay un error en la petición del evento por categoría', err)
@@ -76,19 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 });
 
-    // Función para mostrar más detalles sobre un evento
-    const mostrarDetalle = (evento) => {
-        // Ocultar el contenedor de tarjetas y el selector de categorías
-        contenedorTarjetas.style.display = 'none';
+// Función para mostrar más detalles sobre un evento
+const mostrarDetalle = (evento) => {
+    // Ocultar el contenedor de tarjetas y el selector de categorías
+    contenedorTarjetas.style.display = 'none';
 
-        console.log('TR: Mostrando detalle');
-        // contenedorSelect.style.display = 'none';
-        contenedorOcultarSelect.style.display = 'none';
-        // Vaciar el contenido previo del contenedor de detalles
-        contenedorDetalle.innerHTML = '';
+    console.log('TR: Mostrando detalle');
+    // contenedorSelect.style.display = 'none';
+    contenedorOcultarSelect.style.display = 'none';
+    // Vaciar el contenido previo del contenedor de detalles
+    contenedorDetalle.innerHTML = '';
 
-        // Crear una tarjeta de detalle para el evento que se ha iniciado en el click
-        crearTarjetaDetalle(evento);
-    }
-
-
+    // Crear una tarjeta de detalle para el evento que se ha iniciado en el click
+    crearTarjetaDetalle(evento);
+}

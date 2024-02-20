@@ -31,3 +31,11 @@ main {
 .ocultarSelect {
     display: none !important;
 }
+
+.colorEstrellas{
+    color:#0d6efd;
+}
+
+.colorEstrellaPintada{
+    color: gold;
+}

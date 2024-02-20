@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(URL + 'events/destacados')
         .then(res => res.json())
         .then(datos => {
-            datos.destacados.forEach(evento => {
-                crearTarjeta(evento);
+            datos.destacados.forEach((evento, index) => {
+                crearTarjeta(evento, index);
             })
         })
         .catch(err => {

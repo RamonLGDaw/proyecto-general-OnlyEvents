@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(URL + 'events/destacados')
         .then(res => res.json())
         .then(datos => {
-            datos.destacados.forEach(evento => {
-                crearTarjeta(evento);
+            datos.destacados.forEach((evento, index) => {
+                crearTarjeta(evento, index);
             })
         })
         .catch(err => {
@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
-    // Función para mostrar más detalles sobre un evento
-    const mostrarDetalle = (evento) => {
-        // Ocultar el contenedor de tarjetas y el selector de categorías
-        contenedorTarjetas.style.display = 'none';
+// Función para mostrar más detalles sobre un evento
+const mostrarDetalle = (evento) => {
+    // Ocultar el contenedor de tarjetas y el selector de categorías
+    contenedorTarjetas.style.display = 'none';
 
-        // Vaciar el contenido previo del contenedor de detalles
-        contenedorDetalle.innerHTML = '';
+    // Vaciar el contenido previo del contenedor de detalles
+    contenedorDetalle.innerHTML = '';
 
-        // Crear una tarjeta de detalle para el evento que se ha iniciado en el click
-        crearTarjetaDetalle(evento, true);
-    }
+    // Crear una tarjeta de detalle para el evento que se ha iniciado en el click
+    crearTarjetaDetalle(evento, true);
+}

@@ -30,7 +30,11 @@ const crearTarjetaDetalle = (evento, reservado) => {
 
     const fechaEvento = document.createElement('p');
     fechaEvento.classList.add('card-text');
-    fechaEvento.innerHTML = `<strong>Fecha:</strong> ${evento.fecha}`;
+    fechaEvento.innerHTML = `<strong>Próxima fecha:</strong> ${evento.fecha}`;
+
+    const inclusivoEvento = document.createElement('p');
+    inclusivoEvento.classList.add('card-text');
+    inclusivoEvento.innerHTML = `<strong>Evento inclusivo:</strong> ${evento.inclusivo}`
 
     const precioEvento = document.createElement('p');
     precioEvento.classList.add('card-text');
@@ -60,6 +64,7 @@ const crearTarjetaDetalle = (evento, reservado) => {
     divCardBody.appendChild(nombreEvento);
     divCardBody.appendChild(imagenEvento);
     divCardBody.appendChild(descripcionEvento);
+    divCardBody.appendChild(inclusivoEvento);
     divCardBody.appendChild(localizacionEvento);
     divCardBody.appendChild(fechaEvento);
     divCardBody.appendChild(precioEvento);

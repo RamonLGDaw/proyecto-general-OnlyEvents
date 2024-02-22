@@ -59,6 +59,10 @@ const crearTarjetaDetalle = (evento, reservado) => {
 
     botonReservar.addEventListener('click', () => {
         alert('Formulario reserva en construcción!!')
+        contenedorDetalle.innerHTML = '';
+        contenedorDetalle.innerHTML = 'Espacio en construcción';
+        //Crear todo el formulario
+        
     })
 
     divCardBody.appendChild(nombreEvento);

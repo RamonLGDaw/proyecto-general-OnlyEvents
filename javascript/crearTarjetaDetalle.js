@@ -1,6 +1,5 @@
 
 // Función para crear una tarjeta de detalle que recibe los datos del EVENTO
-
 const crearTarjetaDetalle = (evento, reservado) => {
     const divCard = document.createElement('div');
     divCard.classList.add('card', 'm-1', 'shadow');
@@ -28,9 +27,18 @@ const crearTarjetaDetalle = (evento, reservado) => {
     localizacionEvento.classList.add('card-text');
     localizacionEvento.innerHTML = `<strong>Localización:</strong> ${evento.localizacion}`;
 
-    const fechaEvento = document.createElement('p');
-    fechaEvento.classList.add('card-text');
-    fechaEvento.innerHTML = `<strong>Próxima fecha:</strong> ${evento.fecha}`;
+    const fechasEvento = document.createElement('p');
+    fechasEvento.classList.add('card-text');
+    fechasEvento.innerHTML = `<strong>Fechas Disponibles:</strong>`;
+    
+    const listaFechas = document.createElement('ul'); // Crear lista ordenada
+
+    // Iterar sobre cada fecha y agregarla como un elemento de lista
+    evento.fecha.forEach(fecha => {
+        const fechaElement = document.createElement('li'); // Elemento de lista
+        fechaElement.textContent = fecha;
+        listaFechas.appendChild(fechaElement);
+    });
 
     const inclusivoEvento = document.createElement('p');
     inclusivoEvento.classList.add('card-text');
@@ -70,9 +78,10 @@ const crearTarjetaDetalle = (evento, reservado) => {
     divCardBody.appendChild(descripcionEvento);
     divCardBody.appendChild(inclusivoEvento);
     divCardBody.appendChild(localizacionEvento);
-    divCardBody.appendChild(fechaEvento);
+    fechasEvento.appendChild(listaFechas); // Agregar la lista de fechas
+    divCardBody.appendChild(fechasEvento);
     divCardBody.appendChild(precioEvento);
-    contenedorBotones.appendChild(botonVolver);
+    contenedorBotones.appendChild(botonVolver); 
 
     if(!reservado){
         contenedorBotones.appendChild(botonReservar);

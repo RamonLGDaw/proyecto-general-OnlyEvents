@@ -76,15 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Función para mostrar más detalles sobre un evento
 const mostrarDetalle = (evento) => {
-    // Ocultar el contenedor de tarjetas y el selector de categorías
-    contenedorTarjetas.style.display = 'none';
+    // Verificar si el objeto evento tiene la propiedad 'fechas'
+    if (evento && evento.fecha) {
+        // Ocultar el contenedor de tarjetas y el selector de categorías
+        contenedorTarjetas.style.display = 'none';
 
-    console.log('TR: Mostrando detalle');
-    // contenedorSelect.style.display = 'none';
-    contenedorOcultarSelect.style.display = 'none';
-    // Vaciar el contenido previo del contenedor de detalles
-    contenedorDetalle.innerHTML = '';
+        console.log('TR: Mostrando detalle');
+        // contenedorSelect.style.display = 'none';
+        contenedorOcultarSelect.style.display = 'none';
+        // Vaciar el contenido previo del contenedor de detalles
+        contenedorDetalle.innerHTML = '';
 
-    // Crear una tarjeta de detalle para el evento que se ha iniciado en el click
-    crearTarjetaDetalle(evento);
+        // Crear una tarjeta de detalle para el evento que se ha iniciado en el click
+        crearTarjetaDetalle(evento);
+    } else {
+        console.error('El objeto evento no tiene la propiedad "fecha"');
+    }
 }

@@ -15,7 +15,7 @@ const crearFormularioReserva = (evento) => {
 
     const labelFecha = document.createElement('label');
     labelFecha.setAttribute('for', 'selectFecha');
-    labelFecha.textContent = 'Seleccione una Fecha Disponible:';
+    labelFecha.textContent = 'Fechas Disponibles:';
     
     const selectFecha = document.createElement('select');
     selectFecha.classList.add('form-control');

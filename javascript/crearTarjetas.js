@@ -5,7 +5,8 @@ const crearTarjeta = (evento, tarjetaIndex) => {
 
     const pintarEstrellas = () => {
         for (let i = 0; i < 5; i++) {
-            const estrellaId = `${tarjetaIndex}-${i}estrella`; // ID único para cada estrella
+            // Se recupera el id para cada estrella y se pinta con la clase 'colorEstrellaPintada'
+            const estrellaId = `${tarjetaIndex}-${i}estrella`;
             if (i < valoracion) {
                 document.getElementById(estrellaId).classList.add('colorEstrellaPintada');
             }
@@ -24,17 +25,20 @@ const crearTarjeta = (evento, tarjetaIndex) => {
     nombreEvento.innerHTML = `<strong>Evento:</strong> ${nombre}`;
 
     const divImagenContainer = document.createElement('div');
-    divImagenContainer.classList.add('text-center', 'mb-3'); 
+    divImagenContainer.classList.add('text-center', 'mb-3');
     const imagenEvento = document.createElement('img');
-    imagenEvento.classList.add('img-fluid'); // Clase para hacer la imagen responsive
+    imagenEvento.classList.add('img-fluid');
     imagenEvento.setAttribute('src', imagen);
     imagenEvento.setAttribute('alt', nombre);
     divImagenContainer.appendChild(imagenEvento);
 
+    // Se crean los iconos con las estrellas todas de azul
     const valoracionEvento = document.createElement('div');
-    valoracionEvento.classList.add('d-flex', 'justify-content-center','mt-auto','mb-1')
+    valoracionEvento.classList.add('d-flex', 'justify-content-center', 'mt-auto', 'mb-1')
     for (let i = 0; i < 5; i++) {
-        const estrellaId = `${tarjetaIndex}-${i}estrella`; // ID único para cada estrella
+        // ID único para cada estrella
+        const estrellaId = `${tarjetaIndex}-${i}estrella`;
+        // elemento "i" de icon
         const estrella = document.createElement('i');
         estrella.setAttribute('id', estrellaId);
         estrella.classList.add('bi', 'bi-star-fill', 'mx-1', 'colorEstrellas');
@@ -47,8 +51,9 @@ const crearTarjeta = (evento, tarjetaIndex) => {
 
     btnInfo.addEventListener('click', () => {
         mostrarDetalle(evento);
-        // Comprobación de lo que hay dentro de evento
-        console.log(`Que hay dentro del evento?? ${evento}`) 
+        // Comprobación de lo que hay dentro de evento. 
+        //Esto se puede eliminar para la entrega final
+        console.log(`Que hay dentro del evento?? ${evento}`)
         console.log(evento)
     });
 
@@ -58,6 +63,6 @@ const crearTarjeta = (evento, tarjetaIndex) => {
     divCardBody.appendChild(btnInfo);
     divCard.appendChild(divCardBody);
     contenedorTarjetas.appendChild(divCard);
+    // Se colorean de amarillo las estrellas según la valoración del evento
     pintarEstrellas();
 }
-        

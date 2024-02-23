@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(datos => {
             const selector = document.createElement('select');
             selector.setAttribute('id', 'selectOpciones');
-            selector.classList.add('form-select-sm', 'mb-3');
+            selector.classList.add('form-select','anchoSelect', 'mb-3');
 
             const defaultOption = document.createElement('option');
             defaultOption.setAttribute('value', '');

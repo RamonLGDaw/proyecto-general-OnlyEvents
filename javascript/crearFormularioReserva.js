@@ -6,7 +6,7 @@ const crearFormularioReserva = (evento) => {
     formularioReserva.classList.add('card-body');
 
     const tituloFormulario = document.createElement('h3');
-    tituloFormulario.textContent = 'Selecciona la fecha de tu preferencia';
+    tituloFormulario.textContent = evento.nombre;
     formularioReserva.appendChild(tituloFormulario);
 
     const divFormGroupFecha = document.createElement('div');
@@ -14,7 +14,7 @@ const crearFormularioReserva = (evento) => {
 
     const labelFecha = document.createElement('label');
     labelFecha.setAttribute('for', 'selectFecha');
-    labelFecha.textContent = 'Fechas Disponibles:';
+    labelFecha.textContent = 'Selecciona la fecha:';
     
     const selectFecha = document.createElement('select');
     selectFecha.classList.add('form-control');
@@ -43,8 +43,8 @@ const crearFormularioReserva = (evento) => {
 
     const botonPagar = document.createElement('a');
     botonPagar.classList.add('btn', 'btn-primary', 'mt-3', 'd-block', 'mx-auto');
-    botonPagar.textContent = 'Pagar';
-    botonPagar.setAttribute('href', '#'); // Victor!! Aquí esta en enlace para lo de las formas de pago
+    botonPagar.textContent = 'Pago';
+    botonPagar.setAttribute('href', '#'); // Victor!! Aquí esta en enlace para lo de las formas de pago..
 
     divFormGroupLocalizacion.appendChild(labelLocalizacion);
     divFormGroupLocalizacion.appendChild(inputLocalizacion);

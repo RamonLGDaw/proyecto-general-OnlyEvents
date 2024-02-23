@@ -63,6 +63,7 @@ const crearTarjetaDetalle = (evento, reservado) => {
     botonReservar.textContent = "Reservar";
 
     botonReservar.addEventListener('click', () => {
+
         contenedorDetalle.innerHTML = '';
         document.getElementById('tituloEventosDestacados').innerHTML='';
 
@@ -73,8 +74,8 @@ const crearTarjetaDetalle = (evento, reservado) => {
     divCardBody.appendChild(imagenEvento);
     divCardBody.appendChild(descripcionEvento);
     divCardBody.appendChild(inclusivoEvento);
-    divCardBody.appendChild(localizacionEvento);
-    fechasEvento.appendChild(listaFechas);
+    divCardBody.appendChild(localizacionEvento);    
+    divCardBody.appendChild(listaFechas);
     divCardBody.appendChild(fechasEvento);
     divCardBody.appendChild(precioEvento);
     contenedorBotones.appendChild(botonVolver); 

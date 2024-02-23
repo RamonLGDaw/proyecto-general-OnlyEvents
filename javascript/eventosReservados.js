@@ -26,5 +26,6 @@ const mostrarDetalle = (evento) => {
     contenedorDetalle.innerHTML = '';
 
     // Crear una tarjeta de detalle para el evento que se ha iniciado en el click
+    // El segundo parámetro es para ocultar el botón 'reservar' cuando sea necesario
     crearTarjetaDetalle(evento, true);
 }

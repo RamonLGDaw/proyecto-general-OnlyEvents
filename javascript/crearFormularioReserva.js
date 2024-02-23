@@ -7,7 +7,7 @@ const crearFormularioReserva = (evento) => {
     formularioReserva.classList.add('card-body');
 
     const tituloFormulario = document.createElement('h3');
-    tituloFormulario.textContent = 'Selecciona tus preferencias';
+    tituloFormulario.textContent = 'Selecciona la fecha de tu preferencia';
     formularioReserva.appendChild(tituloFormulario);
 
     const divFormGroupFecha = document.createElement('div');

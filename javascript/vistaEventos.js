@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Agregar los eventos destacados al DOM
             document.getElementById('contenedorEventosDestacados').insertAdjacentElement('afterend', contenedorEventosDestacados);
 
-            // Manejar el evento 'change' del select
             selector.addEventListener('change', () => {
                 const opcionSelect = selector.value;
                 // Ocultar todos los contenedores de eventos

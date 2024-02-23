@@ -24,7 +24,7 @@ const crearTarjeta = (evento, tarjetaIndex) => {
     nombreEvento.innerHTML = `<strong>Evento:</strong> ${nombre}`;
 
     const divImagenContainer = document.createElement('div');
-    divImagenContainer.classList.add('text-center', 'mb-3'); // Clases de Bootstrap para centrar y agregar espacio en la parte inferior
+    divImagenContainer.classList.add('text-center', 'mb-3'); 
     const imagenEvento = document.createElement('img');
     imagenEvento.classList.add('img-fluid'); // Clase para hacer la imagen responsive
     imagenEvento.setAttribute('src', imagen);

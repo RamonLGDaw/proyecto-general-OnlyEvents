@@ -1,4 +1,3 @@
-// Función para crear el formulario de reserva
 const crearFormularioReserva = (evento) => {
     const divFormulario = document.createElement('div');
     divFormulario.classList.add('card', 'm-1', 'shadow');
@@ -11,7 +10,7 @@ const crearFormularioReserva = (evento) => {
     formularioReserva.appendChild(tituloFormulario);
 
     const divFormGroupFecha = document.createElement('div');
-    divFormGroupFecha.classList.add('form-group');
+    divFormGroupFecha.classList.add('form-group', 'mb-3');
 
     const labelFecha = document.createElement('label');
     labelFecha.setAttribute('for', 'selectFecha');
@@ -22,7 +21,7 @@ const crearFormularioReserva = (evento) => {
     selectFecha.setAttribute('id', 'selectFecha');
 
     evento.fecha.forEach(fecha => {
-        const option = document.createElement('option');
+        const option = document.createElement('option');    
         option.textContent = fecha;
         selectFecha.appendChild(option);
     });
@@ -43,9 +42,9 @@ const crearFormularioReserva = (evento) => {
     inputLocalizacion.value = evento.localizacion;
 
     const botonPagar = document.createElement('a');
-    botonPagar.classList.add('btn', 'btn-primary', 'mt-2');
+    botonPagar.classList.add('btn', 'btn-primary', 'mt-3', 'd-block', 'mx-auto');
     botonPagar.textContent = 'Pagar';
-    botonPagar.setAttribute('href', '#'); // Agregar enlace vacío
+    botonPagar.setAttribute('href', '#'); // Victor!! Aquí esta en enlace para lo de las formas de pago
 
     divFormGroupLocalizacion.appendChild(labelLocalizacion);
     divFormGroupLocalizacion.appendChild(inputLocalizacion);

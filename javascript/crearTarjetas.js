@@ -1,4 +1,4 @@
-// Función para crear las tarjetas
+
 // Función para crear las tarjetas
 const crearTarjeta = (evento, tarjetaIndex) => {
     const { nombre, imagen, valoracion } = evento;
@@ -47,9 +47,8 @@ const crearTarjeta = (evento, tarjetaIndex) => {
 
     btnInfo.addEventListener('click', () => {
         mostrarDetalle(evento);
-
         // Comprobación de lo que hay dentro de evento
-        console.log(`Que hay dentro del evento?? ${evento}`) // devuelve [object][object] ?? 
+        console.log(`Que hay dentro del evento?? ${evento}`) 
         console.log(evento)
     });
 

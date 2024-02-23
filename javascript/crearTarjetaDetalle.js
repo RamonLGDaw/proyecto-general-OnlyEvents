@@ -1,6 +1,5 @@
 
 // Función para crear una tarjeta de detalle que recibe los datos del EVENTO
-// Función para crear una tarjeta de detalle que recibe los datos del EVENTO
 const crearTarjetaDetalle = (evento, reservado) => {
     const divCard = document.createElement('div');
     divCard.classList.add('card', 'm-1', 'shadow');

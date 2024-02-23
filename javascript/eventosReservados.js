@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const URL = 'https://qqtj76a7dh.execute-api.us-east-1.amazonaws.com/api/';
     const contenedorTarjetas = document.getElementById('contenedorTarjetas');
-    const contenedorDetalle = document.getElementById('contenedorDetalle'); // Nuevo contenedor para mostrar detalles
+    const contenedorDetalle = document.getElementById('contenedorDetalle'); 
 
     // Mostrar eventos destacados al cargar la vista
     fetch(URL + 'events/destacados')

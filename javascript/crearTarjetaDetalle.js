@@ -1,5 +1,6 @@
 
 // Función para crear una tarjeta de detalle que recibe los datos del EVENTO
+// Función para crear una tarjeta de detalle que recibe los datos del EVENTO
 const crearTarjetaDetalle = (evento, reservado) => {
     const divCard = document.createElement('div');
     divCard.classList.add('card', 'm-1', 'shadow');
@@ -67,58 +68,7 @@ const crearTarjetaDetalle = (evento, reservado) => {
         contenedorDetalle.innerHTML = '';
         document.getElementById('tituloEventosDestacados').innerHTML='';
 
-        const divFormulario = document.createElement('div');
-        divFormulario.classList.add('card', 'm-1', 'shadow');
-
-        const formularioReserva = document.createElement('form');
-        formularioReserva.classList.add('card-body');
-
-        const tituloFormulario = document.createElement('h3');
-        tituloFormulario.textContent = "Selecciona tus preferencias";
-
-        const divFormGroup = document.createElement('div');
-        divFormGroup.classList.add('form-group');
-
-        const labelFecha = document.createElement('label');
-        labelFecha.setAttribute('for', 'selectFecha');
-        labelFecha.textContent = 'Seleccione una Fecha Disponible:';
-        
-        const selectFecha = document.createElement('select');
-        selectFecha.classList.add('form-control', 'mb-3');
-        selectFecha.setAttribute('id', 'selectFecha');
-
-        evento.fecha.forEach(fecha => {
-            const option = document.createElement('option');
-            option.textContent = fecha;
-            selectFecha.appendChild(option);
-        });
-
-        const labelLocalizacion = document.createElement('label');
-        labelLocalizacion.textContent = 'Localización del Evento:';
-        
-        const inputLocalizacion = document.createElement('input');
-        inputLocalizacion.classList.add('form-control', 'mb-3');
-        inputLocalizacion.setAttribute('type', 'text');
-        inputLocalizacion.setAttribute('readonly', 'true');
-        inputLocalizacion.value = evento.localizacion;
-
-        const botonPagar = document.createElement('a');
-        botonPagar.classList.add('btn', 'btn-primary', 'mt-2');
-        botonPagar.textContent = 'Pagar';
-        botonPagar.setAttribute('href', '#');
-
-        divFormGroup.appendChild(labelFecha);
-        divFormGroup.appendChild(selectFecha);
-        divFormGroup.appendChild(labelLocalizacion);
-        divFormGroup.appendChild(inputLocalizacion);
-
-        formularioReserva.appendChild(tituloFormulario);
-        formularioReserva.appendChild(divFormGroup);
-        formularioReserva.appendChild(botonPagar);
-
-        divFormulario.appendChild(formularioReserva);
-
-        contenedorDetalle.appendChild(divFormulario);
+        crearFormularioReserva(evento);
     });
 
     divCardBody.appendChild(nombreEvento);
@@ -126,7 +76,7 @@ const crearTarjetaDetalle = (evento, reservado) => {
     divCardBody.appendChild(descripcionEvento);
     divCardBody.appendChild(inclusivoEvento);
     divCardBody.appendChild(localizacionEvento);
-    fechasEvento.appendChild(listaFechas); 
+    fechasEvento.appendChild(listaFechas);
     divCardBody.appendChild(fechasEvento);
     divCardBody.appendChild(precioEvento);
     contenedorBotones.appendChild(botonVolver); 
